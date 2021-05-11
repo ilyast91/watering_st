@@ -34,8 +34,8 @@ void handle_Root()
   handle_Root_response += "<div class=\"col-xl-4 col-lg-6 col-sm-12\">";
   handle_Root_response += "<div class=\"card m-3\"><div class=\"card-body\">";
   handle_Root_response += "<h5 class=\"card-title\">Датчики</h5><p class=\"card-text\">";
-  handle_Root_response += "Верхний уровень: " + String(readSensor("high")) + "</br>";
-  handle_Root_response += "Нижний уровень: " + String(readSensor("low")) + "</br>";
+  handle_Root_response += "Верхний уровень: " + String(readHighSensor()) + "</br>";
+  handle_Root_response += "Нижний уровень: " + String(readLowSensor()) + "</br>";
   handle_Root_response += "</br>";
   handle_Root_response += "</p></div></div>";
   handle_Root_response += "</div>";

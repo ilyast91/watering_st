@@ -9,7 +9,10 @@ void startSensors() {
   Serial.println("ok");
 }
 
-int readSensor(String location) {
-  if (location == "high") return digitalRead(HIGH_SENSOR_PIN);
-  if (location == "low") return digitalRead(LOW_SENSOR_PIN);
+bool readLowSensor() {
+  return digitalRead(LOW_SENSOR_PIN) == HIGH;
+}
+
+bool readHighSensor() {
+  return digitalRead(HIGH_SENSOR_PIN) == HIGH;
 }

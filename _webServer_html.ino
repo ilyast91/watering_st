@@ -8,7 +8,7 @@ void sendHTML(int code, String data) {
 void sendHTML(int code, String title, String data) {
   if (title != "") title = " | " + title;
   String sendHTML_html;
-  sendHTML_html += "<!doctype html><html lang=\"en\" class=\"h-100\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Clock ST" + title + "</title>";
+  sendHTML_html += "<!doctype html><html lang=\"en\" class=\"h-100\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Watering ST" + title + "</title>";
   sendHTML_html += "<link href=\"https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\"><meta name=\"theme-color\" content=\"#7952b3\">";
   sendHTML_html += "<style>main > .container {padding: 60px 15px 0;} .footer {background-color: #0000FF;} .footer > .container{padding-right:15px;padding-left:15px;}</style>";
   sendHTML_html += "<body class=\"d-flex flex-column h-100\">";
@@ -18,14 +18,13 @@ void sendHTML(int code, String title, String data) {
   sendHTML_html += "</div></main>";
   sendHTML_html += "<footer class=\"footer mt-auto py-3 bg-light\"><div class=\"container\"><span class=\"text-muted\">Создано <a href=\"mailto:ilyast91@gmail.com\">ilyast91@gmail.com</a></span></div></footer>";
   sendHTML_html += "<script src=\"https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js\"></script>";
-  sendHTML_html += "<script src=\"https://ilyast91.github.io/clock_st/display_form/display_form.js\"></script>";
   sendHTML_html += "</body></html>";
   server.send(code, "text/html", sendHTML_html);
 }
 
 String html_header_menu() {
   String html_header_menu = "<header><nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\"><div class=\"container-fluid\">";
-  html_header_menu += "<a class=\"navbar-brand\" href=\"\\\">Clock ST</a>";
+  html_header_menu += "<a class=\"navbar-brand\" href=\"\\\">Watering ST</a>";
   html_header_menu += "<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">";
   html_header_menu += "<span class=\"navbar-toggler-icon\"></span></button><div class=\"collapse navbar-collapse\" id=\"navbarCollapse\"><ul class=\"navbar-nav me-auto mb-2 mb-md-0\">";
   html_header_menu += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"/settings_wifi\">WIFI</a></li>";
