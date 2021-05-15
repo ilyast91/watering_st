@@ -10,9 +10,9 @@ void startSensors() {
 }
 
 bool readLowSensor() {
-  return digitalRead(LOW_SENSOR_PIN) == HIGH;
+  return digitalRead(LOW_SENSOR_PIN) == LOW;
 }
 
 bool readHighSensor() {
-  return digitalRead(HIGH_SENSOR_PIN) == HIGH;
+  return digitalRead(HIGH_SENSOR_PIN) == LOW;
 }
