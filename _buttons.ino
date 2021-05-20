@@ -19,7 +19,7 @@ void checkPressedOnStartSafeModeBtn() {
 
 void checkPressedSafeModeBtn() {
   if (digitalRead(RESET_PIN) == HIGH) {
-    //todo
+    turnOnRelay(1, HIGH);
     digitalWrite(RESET_PIN, HIGH);
   }
 }
