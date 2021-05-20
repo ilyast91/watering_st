@@ -63,6 +63,6 @@ void turnOnRelay(int pin, bool state) {
       break;
   }
 
-  Serial.println("Relay "+ String(pin) + " state: " + state_str);
+  //Serial.println("Relay "+ String(pin) + " state: " + state_str);
   digitalWrite(relay, state);
 }
