@@ -36,7 +36,6 @@ void setup() {
   startWiFi();
   startWebServer();
   startSensors();
-  startSensors();
   startRelay();
 }
 

@@ -25,18 +25,13 @@ void startRelay() {
 
 void relayLooping() {
   if (safeMode) return;
-  if (readHighSensor() && readLowSensor()) {
-    // Если сраборал верхний датчик - отключаем реле набора воды, иначе включаем 
+  if (highSensorIsDown() && lowSensorIsDown()) {
+    // Если верхний и нижний датчик true - то набираем воду
     turnOnRelay(1, HIGH);
-  } else if (!readHighSensor() && !readLowSensor()) {
-    // Если сраборал нижний датчик - отключаем реле полива 1,2,3
+  } else if (!highSensorIsDown() && !lowSensorIsDown()) {
+    // Если верхний и нижний датчик false - то выключаем набор воду
     turnOnRelay(1, LOW);
-    turnOnRelay(2, LOW);
-    turnOnRelay(3, LOW);
-    turnOnRelay(4, LOW);
   } 
-  
-  //todo здесь - должна быть программа полива
 }
 
 void turnOnRelay(int pin, bool state) {
